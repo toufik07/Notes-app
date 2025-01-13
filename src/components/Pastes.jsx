@@ -47,12 +47,12 @@ function Pastes() {
                 {
                     filteredData.map((paste) => {
                         return (
-                            <div className=" p-2 border-[1.2px] border-slate-600 flex mb-4" key={paste.id}>
-                                <div className=" w-3/5">
+                            <div className=" p-2 border-[1.2px] border-slate-600 flex mb-4 flex-col sm:flex-row" key={paste.id}>
+                                <div className=" sm:w-3/5 w-full p-2 text-center sm:text-start">
                                     <p className=' text-2xl'>{paste.title}</p>
                                     <p className=' text-sm'>{paste.content}</p>
                                 </div>
-                                <div className=" flex flex-col w-2/5 items-end pr-4">
+                                <div className=" flex flex-col sm:w-2/5 items-end pr-4 m-auto">
                                     <div className=" flex">
                                         <Link to={'/'+ paste.id}
                                         className='p-1 border-[1.2px] border-slate-600 rounded-sm mr-2 bg-gray-800'><RiEdit2Line /></Link>
@@ -75,9 +75,6 @@ function Pastes() {
                                         <MdDateRange />
                                         {paste.createdAt.split('T')[0]}
                                     </div>
-                                    {/* <div className="">
-                    Format
-                </div> */}
                                 </div>
                             </div>
                         )
